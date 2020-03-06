@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{ asset('fonts/font-awesome.min.css') }}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{ asset('fonts/ionicons.min.css') }}">
+    <!-- custom css -->
+    @stack('customcss')
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('dist/css/AdminLTE.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dist/css/skins/_all-skins.min.css') }}">
@@ -26,7 +28,7 @@
         <header class="main-header">
             <!-- Logo -->
             <a href="#" class="logo">
-                <span class="logo-mini"><b>A</b>LT</span>
+                <span class="logo-mini"><b>B</b>S</span>
                 <span class="logo-lg">Button<b>Soft</b></span>
             </a>
             <nav class="navbar navbar-static-top">
@@ -86,6 +88,7 @@
                 <ul class="sidebar-menu">
                     <li class="treeview">
                     <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                    <li><a href="{{ route('kategori.index') }}"><i class="fa fa-adjust"></i> Kategori</a></li>
                     <li><a href="#"><i class="fa fa-pencil"></i>Artikel</a></li>
                     </li>
                 </ul>
@@ -117,6 +120,7 @@
         <script src="{{ asset('plugins/jQuery/jquery-2.2.3.min.js') }}"></script>
         <!-- Bootstrap 3.3.6 -->
         <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+        @stack('datatables')
         <!-- SlimScroll -->
         <script src="{{ asset('plugins/slimScroll/jquery.slimscroll.min.j') }}s"></script>
         <!-- FastClick -->
@@ -125,6 +129,7 @@
         <script src="{{ asset('dist/js/app.min.js') }}"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="{{ asset('dist/js/demo.js') }}"></script>
+        @stack('customdatatables')
 </body>
 
 </html>
