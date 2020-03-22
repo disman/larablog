@@ -22,7 +22,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nama Kategori</label>
+                        <label for="exampleInputEmail1">Slug</label>
                         <input type="text" class="form-control" name="slug" placeholder="Slug" value="{{ old('slug') }}">
                     </div>
                 </div>
@@ -30,7 +30,6 @@
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <a href="{{ route('kategori.index') }}" class="btn btn-warning">Kembali</a>
-
                 </div>
             </form>
         </div>

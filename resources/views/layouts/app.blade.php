@@ -113,7 +113,7 @@
 
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
-                <b><a href="#">Laravel Blog</a></b>
+                <b><a href="#">Button Soft</a></b>
             </div>
             <strong> <a href="#">Laravel Blog</a></strong>
         </footer>

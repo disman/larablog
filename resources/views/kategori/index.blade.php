@@ -10,7 +10,7 @@
     <div class="box-header">
         <h3 class="box-title">Data Kategori</h3>
         <div class="pull-right">
-            <a href="{{ route('kategori.create') }}" class="btn btn-primary">Tambah Kategori</a>
+            <a href="{{ route('kategori.create') }}" class="btn btn-primary btn-sm">Tambah Kategori</a>
         </div>
     </div>
     <!-- /.box-header -->
@@ -25,14 +25,18 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($kategoris as $index=>$kategori)
+                @php
+                $no=1
+                @endphp
+
+                @foreach ($kategoris as $kategori)
                 <tr>
-                    <td>{{ $index + $loop->iteration }}</td>
+                    <td>{{ $no++ }}</td>
                     <td>{{ $kategori->nama_kategori }}</td>
                     <td>{{ $kategori->slug }}</td>
                     <td>
-                        <a href="#" class="btn btn-info">Edit</a>
-                        <a href="#" class="btn btn-danger">Hapus</a>
+                        <a href="{{ route('kategori.edit', $kategori->slug) }}" class="btn btn-info btn-xs">Edit</a>
+                        <a href="#" class="btn btn-danger btn-xs">Hapus</a>
                     </td>
                 </tr>
                 @endforeach

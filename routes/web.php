@@ -19,4 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Routing kategori
 Route::resource('kategori', 'KategoriController');
+
+
+// Routing grocery
+Route::get('/grocery', 'GroceryController@index');
+Route::post('/grocery/post', 'GroceryController@store');
