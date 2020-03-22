@@ -21,6 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Routing kategori
 Route::resource('kategori', 'KategoriController');
+Route::get('kategori/delete/{id}', 'KategoriController@destroy');
 
 
 // Routing grocery

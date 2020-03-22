@@ -10,7 +10,7 @@
     <div class="box-header">
         <h3 class="box-title">Data Kategori</h3>
         <div class="pull-right">
-            <a href="{{ route('kategori.create') }}" class="btn btn-primary btn-sm">Tambah Kategori</a>
+            <a href="{{ route('kategori.create') }}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Tambah Kategori</a>
         </div>
     </div>
     <!-- /.box-header -->
@@ -35,8 +35,8 @@
                     <td>{{ $kategori->nama_kategori }}</td>
                     <td>{{ $kategori->slug }}</td>
                     <td>
-                        <a href="{{ route('kategori.edit', $kategori->slug) }}" class="btn btn-info btn-xs">Edit</a>
-                        <a href="#" class="btn btn-danger btn-xs">Hapus</a>
+                        <a href="{{ route('kategori.edit', $kategori->id) }}" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                        <a href="/kategori/delete/{{ $kategori->id }}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span> Hapus</a>
                     </td>
                 </tr>
                 @endforeach
