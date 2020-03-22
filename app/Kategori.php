@@ -19,4 +19,9 @@ class Kategori extends Model
     {
         return 'slug';
     }
+
+    public function artikel()
+    {
+        return $this->hasMany(\App\Artikel::class, 'categoris_id', 'id');
+    }
 }

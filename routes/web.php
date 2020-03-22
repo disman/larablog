@@ -23,6 +23,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('kategori', 'KategoriController');
 Route::get('kategori/delete/{id}', 'KategoriController@destroy');
 
+// Routing artikel
+Route::resource('artikel', 'ArtikelController');
+
 
 // Routing grocery
 Route::get('/grocery', 'GroceryController@index');

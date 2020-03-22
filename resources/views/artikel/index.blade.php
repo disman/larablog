@@ -2,15 +2,15 @@
 @push('customcss')
 <script src="{{ asset('plugins/datatables/dataTables.bootstrap.css') }}"></script>
 @endpush
-@section('title','Kategori')
-@section('page-title','Kategori')
+@section('title','Artikel')
+@section('page-title','Artikel')
 @section('content')
 <!-- Default box -->
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Data Kategori</h3>
+        <h3 class="box-title">Data Artikel</h3>
         <div class="pull-right">
-            <a href="{{ route('kategori.create') }}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Tambah Kategori</a>
+            <a href="{{ route('artikel.create') }}" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-plus"></span> Tambah Data</a>
         </div>
     </div>
     <!-- /.box-header -->
@@ -19,27 +19,25 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Nama Kategori</th>
-                    <th>Slug</th>
+                    <th>Judul</th>
+                    <th>Gambar</th>
+                    <th>Kategori</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                @php
-                $no=1
-                @endphp
-
-                @foreach ($kategoris as $kategori)
+                @foreach($artikels as $artikel)
                 <tr>
-                    <td>{{ $no++ }}</td>
-                    <td>{{ $kategori->nama_kategori }}</td>
-                    <td>{{ $kategori->slug }}</td>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $artikel->title }}</td>
+                    <td><img src="{{ asset('uploads/'.$artikel->gambar) }}" width="50px" height="50px"></td>
+                    <td>{{ $artikel->kategori->nama_kategori }}</td>
                     <td>
-                        <a href="{{ route('kategori.edit', $kategori->id) }}" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+                        <a href="{{ route('artikel.edit', $artikel->id) }}" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>
 
                         <a href="javascript:void(0)" onclick="$(this).find('form').submit()" class="btn btn-danger btn-xs">
                             <span class="glyphicon glyphicon-trash"></span> Hapus
-                            <form action="{{ route('kategori.destroy', $kategori->id) }}" method="POST">
+                            <form action="{{ route('artikel.destroy', $artikel->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                             </form>

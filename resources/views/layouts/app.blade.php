@@ -89,7 +89,7 @@
                     <li class="treeview">
                     <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                     <li><a href="{{ route('kategori.index') }}"><i class="fa fa-adjust"></i> Kategori</a></li>
-                    <li><a href="#"><i class="fa fa-pencil"></i>Artikel</a></li>
+                    <li><a href="{{ route('artikel.index') }}"><i class="fa fa-pencil"></i>Artikel</a></li>
                     </li>
                 </ul>
             </section>
