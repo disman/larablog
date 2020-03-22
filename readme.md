@@ -9,4 +9,4 @@
 
 ## About Laravel
 
-Aplikasi blog ini dikembangkan menggunakan laravel 5.8 sebagai backendnya dan template adminLTE sebagai frontendnya.
+Aplikasi blog ini dikembangkan menggunakan laravel 5.8 sebagai backendnya dan template adminLTE. Untuk frontendnya menggunakan bootstrap.
