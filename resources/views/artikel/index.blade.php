@@ -30,7 +30,7 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $artikel->title }}</td>
-                    <td><img src="{{ asset('uploads/'.$artikel->gambar) }}" width="50px" height="50px"></td>
+                    <td><img src="{{ asset('uploads/'.$artikel->gambar) }}" width="80px" height="50px"></td>
                     <td>{{ $artikel->kategori->nama_kategori }}</td>
                     <td>
                         <a href="{{ route('artikel.edit', $artikel->id) }}" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>

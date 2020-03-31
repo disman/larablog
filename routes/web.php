@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'Web\FrontController@index');
+
+Route::get('/auth', function () {
     return view('login');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('home', 'HomeController@index')->name('home');
 
 // Routing kategori
 Route::resource('kategori', 'KategoriController');
