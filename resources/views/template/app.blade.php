@@ -127,13 +127,8 @@
                   </div>
                   <div class="col-md-6">
                      <div class="footer-widget">
-                        <h3 class="footer-title">Catagories</h3>
-                        <ul class="footer-links">
-                           <li><a href="category.html">Web Design</a></li>
-                           <li><a href="category.html">JavaScript</a></li>
-                           <li><a href="category.html">Css</a></li>
-                           <li><a href="category.html">Jquery</a></li>
-                        </ul>
+                        <h3 class="footer-title">Kategori</h3>
+                        @stack('kategori')
                      </div>
                   </div>
                </div>

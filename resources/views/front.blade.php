@@ -95,4 +95,12 @@
 </div>
 <!-- /section -->
 
+@push('kategori')
+<ul class="footer-links">
+   @foreach($kategori as $row)
+   <li><a href="#">{{ $row->nama_kategori }}</a></li>
+   @endforeach
+</ul>
+@endpush
+
 @endsection
