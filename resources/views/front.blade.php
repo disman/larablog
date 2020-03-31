@@ -38,7 +38,7 @@
       <div class="row">
          <div class="col-md-12">
             <div class="section-title">
-               <h2>Recent Posts</h2>
+               <h2>Total Artikel</h2>
             </div>
          </div>
          <div class="clearfix visible-md visible-lg"></div>
@@ -76,14 +76,16 @@
             <!-- post widget Terkait -->
             <div class="aside-widget">
                <div class="section-title">
-                  <h2>Most Read</h2>
+                  <h2>Artikel Terkait</h2>
                </div>
+               @foreach($artikelTerkait as $row)
                <div class="post post-widget">
-                  <a class="post-img" href="blog-post.html"><img src="" alt="" width="80" height="60"></a>
+                  <a class="post-img" href="blog-post.html"><img src="{{ asset('uploads/'.$row->gambar) }}" alt="" width="80" height="60"></a>
                   <div class="post-body">
-                     <h3 class="post-title"><a href="blog-post.html"></a></h3>
+                     <h3 class="post-title"><a href="blog-post.html">{{ $row->title }}</a></h3>
                   </div>
                </div>
+               @endforeach
             </div>
          </div>
       </div>
