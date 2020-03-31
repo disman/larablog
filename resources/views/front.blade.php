@@ -61,7 +61,7 @@
                            <a class="post-category cat-2" href="category.html">{{ $row->kategori->nama_kategori }}</a>
                            <span class="post-date">{{ $row->created_at->diffForHumans() }}</span>
                         </div>
-                        <h3 class="post-title"><a href="#">{{ $row->title }}</a></h3>
+                        <h3 class="post-title"><a href="{{ route('artikel.detail', $row->title) }}">{{ $row->title }}</a></h3>
                      </div>
                   </div>
                </div>

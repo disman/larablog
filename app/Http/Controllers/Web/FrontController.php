@@ -17,4 +17,11 @@ class FrontController extends Controller
         $totalArtikel = Artikel::latest()->get();
         return view('front', compact('kategori', 'artikel', 'totalArtikel', 'artikelTerkait'));
     }
+
+    public function show(Artikel $judul)
+    {
+        $artikelDetail = $judul;
+        $kategori = Kategori::all();
+        return view('front.artikel_detail', compact('artikelDetail', 'kategori'));
+    }
 }

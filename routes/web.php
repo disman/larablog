@@ -11,8 +11,12 @@
 |
 */
 
+// Frontend
 Route::get('/', 'Web\FrontController@index');
+Route::get('/Artikel/{judul}', 'Web\FrontController@show')->name('artikel.detail');
 
+
+// Backend
 Route::get('/auth', function () {
     return view('login');
 });
