@@ -13,6 +13,7 @@ class FrontController extends Controller
     {
         $kategori = Kategori::all();
         $artikel = Artikel::latest()->get()->random(2);
-        return view('front', compact('kategori', 'artikel'));
+        $totalArtikel = Artikel::latest()->get();
+        return view('front', compact('kategori', 'artikel', 'totalArtikel'));
     }
 }
