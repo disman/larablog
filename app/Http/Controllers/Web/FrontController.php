@@ -14,14 +14,15 @@ class FrontController extends Controller
         $kategori = Kategori::all();
         $artikel = Artikel::latest()->get()->random(2);
         $artikelTerkait = Artikel::latest()->limit(5)->get();
-        $totalArtikel = Artikel::latest()->get();
+        $totalArtikel = Artikel::latest()->limit(4)->get();
         return view('front', compact('kategori', 'artikel', 'totalArtikel', 'artikelTerkait'));
     }
 
     public function show(Artikel $judul)
     {
         $artikelDetail = $judul;
-        $kategori = Kategori::all();
+        // $kategori = Kategori::all();
+        $kategori = Kategori::withCount('Artikel')->get();
         return view('front.artikel_detail', compact('artikelDetail', 'kategori'));
     }
 }

@@ -86,10 +86,9 @@
                </div>
                <div class="category-widget">
                   <ul>
-                     <li><a href="#" class="cat-1">Web Design<span>340</span></a></li>
-                     <li><a href="#" class="cat-2">JavaScript<span>74</span></a></li>
-                     <li><a href="#" class="cat-4">JQuery<span>41</span></a></li>
-                     <li><a href="#" class="cat-3">CSS<span>35</span></a></li>
+                     @foreach($kategori as $row)
+                     <li><a href="#" class="cat-3">{{ $row->nama_kategori }}<span>{{ $row->artikel_count }}</span></a></li>
+                     @endforeach
                   </ul>
                </div>
             </div>

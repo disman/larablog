@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-   <title>laravel Blog</title>
+   <title>Laravel Blog</title>
 
    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:700%7CNunito:300,600" rel="stylesheet">
 
@@ -28,7 +28,7 @@
             <div class="container">
                <!-- logo -->
                <div class="nav-logo">
-                  <a href="index.html" class="logo"><img src="{{asset('front/img/logo.png')}}" alt=""></a>
+                  <a href="/" class="logo"><img src="{{asset('front/img/logo.png')}}" alt=""></a>
                </div>
                <!-- /logo -->
 
@@ -97,7 +97,7 @@
             <div class="col-md-5">
                <div class="footer-widget">
                   <div class="footer-logo">
-                     <a href="index.html" class="logo"><img src="{{asset('front/img/logo.png')}}" alt=""></a>
+                     <a href="/" class="logo"><img src="{{asset('front/img/logo.png')}}" alt=""></a>
                   </div>
                   <ul class="footer-nav">
                      <li><a href="#">Privacy Policy</a></li>
