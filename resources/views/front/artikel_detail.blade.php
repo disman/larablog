@@ -87,7 +87,7 @@
                <div class="category-widget">
                   <ul>
                      @foreach($kategori as $row)
-                     <li><a href="#" class="cat-3">{{ $row->nama_kategori }}<span>{{ $row->artikel_count }}</span></a></li>
+                     <li><a href="{{ route('artikel.kategori', $row->slug) }}" class="cat-3">{{ $row->nama_kategori }}<span>{{ $row->artikel_count }}</span></a></li>
                      @endforeach
                   </ul>
                </div>
@@ -105,7 +105,7 @@
 @push('kategori')
 <ul class="footer-links">
    @foreach($kategori as $row)
-   <li><a href="#">{{ $row->nama_kategori }}</a></li>
+   <li><a href="{{ route('artikel.kategori', $row->slug) }}">{{ $row->nama_kategori }}</a></li>
    @endforeach
 </ul>
 @endpush

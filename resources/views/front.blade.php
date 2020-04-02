@@ -2,7 +2,7 @@
 @push('nav')
 <ul class="nav-menu nav navbar-nav">
    @foreach($kategori as $row)
-   <li class="cat-1"><a href="#">{{ $row->nama_kategori }}</a></li>
+   <li class="cat-1"><a href="{{ route('artikel.kategori', $row->slug) }}">{{ $row->nama_kategori }}</a></li>
    @endforeach
 </ul>
 @endpush
@@ -98,7 +98,7 @@
 @push('kategori')
 <ul class="footer-links">
    @foreach($kategori as $row)
-   <li><a href="#">{{ $row->nama_kategori }}</a></li>
+   <li><a href="{{ route('artikel.kategori', $row->slug) }}">{{ $row->nama_kategori }}</a></li>
    @endforeach
 </ul>
 @endpush

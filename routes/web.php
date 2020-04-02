@@ -15,6 +15,8 @@
 Route::get('/', 'Web\FrontController@index');
 Route::get('/Artikel/{judul}', 'Web\FrontController@show')->name('artikel.detail');
 
+Route::get('/Artikel-kategori/{kategori}', 'Web\FrontController@artikelKategori')->name('artikel.kategori');
+
 
 // Backend
 Route::get('/auth', function () {
