@@ -40,8 +40,8 @@
                 <textarea name="body" id="editor1" class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{!! $artikel->body !!}</textarea>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Update</button>
-                <a href="{{ route('artikel.index') }}" class="btn btn-warning">Back</a>
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-check"></span> Update</button>
+                <a href="{{ route('artikel.index') }}" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
             </div>
 
         </form>

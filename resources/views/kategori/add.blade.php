@@ -38,8 +38,8 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Post</button>
-                    <a href="{{ route('kategori.index') }}" class="btn btn-warning">Back</a>
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-saved"></span> Post</button>
+                    <a href="{{ route('kategori.index') }}" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
                 </div>
             </form>
         </div>

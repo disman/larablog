@@ -39,13 +39,26 @@ class ArtikelController extends Controller
      */
     public function store(Request $request)
     {
-        $image = $request->file('gambar')->store('artikel');
-        Artikel::create([
-            'title' => \Str::slug($request->title),
-            'body' => $request->body,
-            'gambar' => $image,
-            'categoris_id' => $request->categoris_id
+        $this->validate($request, [
+            'title'  => 'required',
+            'body'   => 'required',
+            'gambar' => 'mimes:jpg,bmp,png'
         ]);
+
+        if (empty($request->file('gambar'))) {
+            Artikel::create([
+                'title' => \Str::slug($request->title),
+                'body' => $request->body,
+                'categoris_id' => $request->categoris_id
+            ]);
+        } else {
+            Artikel::create([
+                'title' => \Str::slug($request->title),
+                'body' => $request->body,
+                'gambar' => $request->file('gambar')->store('artikel'),
+                'categoris_id' => $request->categoris_id
+            ]);
+        }
         return redirect()->route('artikel.index');
     }
 
@@ -82,14 +95,29 @@ class ArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $artikel = Artikel::find($id);
-        Storage::delete($artikel->gambar);
-        $artikel->update([
-            'title' => \Str::slug($request->title),
-            'body' => $request->body,
-            'gambar' => $request->file('gambar')->store('artikel'),
-            'categoris_id' => $request->categoris_id
+        $this->validate($request, [
+            'title'  => 'required',
+            'body'   => 'required',
+            'gambar' => 'mimes:jpg,bmp,png'
         ]);
+
+        if (empty($request->file('gambar'))) {
+            $artikel = Artikel::find($id);
+            $artikel->update([
+                'title' => \Str::slug($request->title),
+                'body' => $request->body,
+                'categoris_id' => $request->categoris_id
+            ]);
+        } else {
+            $artikel = Artikel::find($id);
+            Storage::delete($artikel->gambar);
+            $artikel->update([
+                'title' => \Str::slug($request->title),
+                'body' => $request->body,
+                'gambar' => $request->file('gambar')->store('artikel'),
+                'categoris_id' => $request->categoris_id
+            ]);
+        }
         return redirect()->route('artikel.index');
     }
 

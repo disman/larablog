@@ -15,10 +15,16 @@
         <form action="{{ route('artikel.store') }}" enctype="multipart/form-data" method="POST">
             @csrf
             <div class="form-group">
+                @if($errors->has('title'))
+                <div class="alert alert-danger" role="alert">{{ $errors->first('title') }}</div>
+                @endif
                 <label>Judul Artikel</label>
                 <input type="text" class="form-control" name="title">
             </div>
             <div class="form-group">
+                @if($errors->has('gambar'))
+                <div class="alert alert-danger" role="alert">{{ $errors->first('gambar') }}</div>
+                @endif
                 <label>Gambar</label>
                 <input type="file" class="form-control" name="gambar">
             </div>
@@ -31,12 +37,15 @@
                 </select>
             </div>
             <div class="form-group">
+                @if($errors->has('body'))
+                <div class="alert alert-danger" role="alert">{{ $errors->first('body') }}</div>
+                @endif
                 <label>Isi Artikel</label>
                 <textarea name="body" id="editor1" class="textarea" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Post</button>
-                <a href="#" class="btn btn-warning">Back</a>
+                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-saved"></span> Post</button>
+                <a href="{{ route('artikel.index') }}" class="btn btn-warning"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
             </div>
 
         </form>
