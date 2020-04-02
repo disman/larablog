@@ -17,12 +17,22 @@
                 @csrf
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nama Kategori</label>
+                        @if($errors->has('nama_kategori'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ $errors->first('nama_kategori') }}
+                        </div>
+                        @endif
+                        <label for="nama_kategori">Nama Kategori</label>
                         <input type="text" class="form-control" name="nama_kategori" placeholder="Kategori" value="{{ old('nama_kategori') }}">
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Slug</label>
+                        @if($errors->has('slug'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ $errors->first('slug') }}
+                        </div>
+                        @endif
+                        <label for="slug">Slug</label>
                         <input type="text" class="form-control" name="slug" placeholder="Slug" value="{{ old('slug') }}">
                     </div>
                 </div>

@@ -130,6 +130,10 @@
         <!-- AdminLTE for demo purposes -->
         <script src="{{ asset('dist/js/demo.js') }}"></script>
         @stack('customdatatables')
+
+        <script type="text/javascript">
+            $('.alert').fadeIn().delay(3000).fadeOut('slow');
+        </script>
 </body>
 
 </html>

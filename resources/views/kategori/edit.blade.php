@@ -17,12 +17,12 @@
                 @csrf
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nama Kategori</label>
+                        <label for="nama_kategori">Nama Kategori</label>
                         <input type="text" class="form-control" name="nama_kategori" placeholder="Kategori" value="{{ $kategori->nama_kategori }}">
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Slug</label>
+                        <label for="slug">Slug</label>
                         <input type="text" class="form-control" name="slug" placeholder="Slug" value="{{ $kategori->slug }}">
                     </div>
                 </div>

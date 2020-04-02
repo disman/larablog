@@ -36,6 +36,10 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'nama_kategori' => 'required|min:5',
+            'slug'          => 'required'
+        ]);
         Kategori::create($request->all());
         return redirect()->route('kategori.index');
     }
