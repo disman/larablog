@@ -58,7 +58,7 @@
                      <a class="post-img" href="#"><img src="{{ asset('uploads/'.$row->gambar) }}" alt="" width="200px" height="150px"></a>
                      <div class="post-body">
                         <div class="post-meta">
-                           <a class="post-category cat-2" href="category.html">{{ $row->kategori->nama_kategori }}</a>
+                           <a class="post-category cat-2" href="#">{{ $row->kategori->nama_kategori }}</a>
                            <span class="post-date">{{ $row->created_at->diffForHumans() }}</span>
                         </div>
                         <h3 class="post-title"><a href="{{ route('artikel.detail', $row->title) }}">{{ $row->title }}</a></h3>
@@ -80,7 +80,7 @@
                </div>
                @foreach($artikelTerkait as $row)
                <div class="post post-widget">
-                  <a class="post-img" href="blog-post.html"><img src="{{ asset('uploads/'.$row->gambar) }}" alt="" width="80" height="60"></a>
+                  <a class="post-img" href="#"><img src="{{ asset('uploads/'.$row->gambar) }}" alt="" width="80" height="60"></a>
                   <div class="post-body">
                      <h3 class="post-title"><a href="{{ route('artikel.detail', $row->title) }}">{{ $row->title }}</a></h3>
                   </div>

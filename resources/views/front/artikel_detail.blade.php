@@ -63,17 +63,19 @@
                <div class="section-title">
                   <h2>Featured Posts</h2>
                </div>
+               @foreach($artikelTerkait as $row)
                <div class="post post-thumb">
-                  <a class="post-img" href="blog-post.html"><img src="{{asset('front/img/post-2.jpg')}}" alt=""></a>
+                  <a class="post-img" href="#"><img src="{{ asset('uploads/'.$row->gambar) }}" alt=""></a>
                   <div class="post-body">
                      <div class="post-meta">
-                        <a class="post-category cat-3" href="#">Jquery</a>
-                        <span class="post-date">March 27, 2018</span>
+                        <a class="post-category cat-3" href="#">{{ $row->kategori->nama_kategori }}</a>
+                        <span class="post-date">{{ $row->created_at->diffForHumans() }}</span>
                      </div>
-                     <h3 class="post-title"><a href="blog-post.html">Ask HN: Does Anybody Still JQuery?</a>
+                     <h3 class="post-title"><a href="{{ route('artikel.detail', $row->title) }}">{{ $row->title }}</a>
                      </h3>
                   </div>
                </div>
+               @endforeach
 
 
             </div>
@@ -82,7 +84,7 @@
             <!-- catagories -->
             <div class="aside-widget">
                <div class="section-title">
-                  <h2>Catagories</h2>
+                  <h2>Kategori</h2>
                </div>
                <div class="category-widget">
                   <ul>

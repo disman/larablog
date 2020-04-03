@@ -22,8 +22,9 @@ class FrontController extends Controller
     {
         $artikelDetail = $judul;
         // $kategori = Kategori::all();
+        $artikelTerkait = Artikel::latest()->get()->random(3);
         $kategori = Kategori::withCount('Artikel')->get();
-        return view('front.artikel_detail', compact('artikelDetail', 'kategori'));
+        return view('front.artikel_detail', compact('artikelDetail', 'kategori', 'artikelTerkait'));
     }
 
     public function artikelKategori(Kategori $kategori)
