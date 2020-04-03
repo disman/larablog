@@ -30,11 +30,14 @@ Route::get('/auth', function () {
 
 Auth::routes();
 
-Route::get('home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth'], function () {
 
-// Routing kategori
-Route::resource('kategori', 'KategoriController');
-Route::get('kategori/delete/{id}', 'KategoriController@destroy');
+    Route::get('home', 'HomeController@index')->name('home');
 
-// Routing artikel
-Route::resource('artikel', 'ArtikelController');
+    // Routing kategori
+    Route::resource('kategori', 'KategoriController');
+    Route::get('kategori/delete/{id}', 'KategoriController@destroy');
+
+    // Routing artikel
+    Route::resource('artikel', 'ArtikelController');
+});
