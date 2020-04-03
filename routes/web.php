@@ -16,8 +16,11 @@ Route::get('/', 'Web\FrontController@index');
 Route::get('/Artikel/{judul}', 'Web\FrontController@show')->name('artikel.detail');
 Route::get('/Artikel-kategori/{kategori}', 'Web\FrontController@artikelKategori')->name('artikel.kategori');
 
-// About
+// About Us
 Route::get('/About', 'Web\FrontController@about')->name('about');
+
+// Contact Us
+Route::get('/Contact', 'Web\FrontController@contact')->name('contact');
 
 
 // Backend

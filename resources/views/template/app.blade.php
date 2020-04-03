@@ -55,9 +55,9 @@
             <!-- nav -->
             <div class="section-row">
                <ul class="nav-aside-menu">
-                  <li><a href="#">Home</a></li>
+                  <li><a href="/">Home</a></li>
                   <li><a href="{{ route('about') }}">About Us</a></li>
-                  <li><a href="#">Contacts</a></li>
+                  <li><a href="{{ route('contact') }}">Contacts</a></li>
                </ul>
             </div>
             <!-- /nav -->
@@ -119,9 +119,9 @@
                      <div class="footer-widget">
                         <h3 class="footer-title">About Us</h3>
                         <ul class="footer-links">
-                           <li><a href="about.html">About Us</a></li>
+                           <li><a href="{{ route('about') }}">About Us</a></li>
                            <li><a href="#">Join Us</a></li>
-                           <li><a href="contact.html">Contacts</a></li>
+                           <li><a href="{{ route('contact') }}">Contacts</a></li>
                         </ul>
                      </div>
                   </div>

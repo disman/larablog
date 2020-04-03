@@ -41,4 +41,10 @@ class FrontController extends Controller
         $kategori = Kategori::all();
         return view('front.about', compact('kategori'));
     }
+
+    public function contact()
+    {
+        $kategori = Kategori::all();
+        return view('front.kontak', compact('kategori'));
+    }
 }
