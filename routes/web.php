@@ -14,8 +14,10 @@
 // Frontend
 Route::get('/', 'Web\FrontController@index');
 Route::get('/Artikel/{judul}', 'Web\FrontController@show')->name('artikel.detail');
-
 Route::get('/Artikel-kategori/{kategori}', 'Web\FrontController@artikelKategori')->name('artikel.kategori');
+
+// About
+Route::get('/About', 'Web\FrontController@about')->name('about');
 
 
 // Backend
@@ -33,8 +35,3 @@ Route::get('kategori/delete/{id}', 'KategoriController@destroy');
 
 // Routing artikel
 Route::resource('artikel', 'ArtikelController');
-
-
-// Routing grocery
-Route::get('/grocery', 'GroceryController@index');
-Route::post('/grocery/post', 'GroceryController@store');
