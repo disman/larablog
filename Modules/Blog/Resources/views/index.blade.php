@@ -1,4 +1,4 @@
-@extends('template.theme')
+@extends('layouts.front')
 
 @section('content')
 <h1>Hello World</h1>

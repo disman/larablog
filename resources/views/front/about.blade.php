@@ -1,90 +1,35 @@
-@extends('template.app')
-@push('nav')
-<ul class="nav-menu nav navbar-nav">
-   @foreach($kategori as $row)
-   <li class="cat-1"><a href="{{ route('artikel.kategori', $row->slug) }}">{{ $row->nama_kategori }}</a></li>
-   @endforeach
-</ul>
-@endpush
+<section id="about" class="about">
+   <div class="container-fluid">
 
-@section('content')
-
-<!-- Page Header -->
-<div class="page-header">
-   <div class="container">
       <div class="row">
-         <div class="col-md-10">
-            <ul class="page-header-breadcrumb">
-               <li><a href="/">Home</a></li>
-               <li>About Us</li>
-            </ul>
-            <h1>About Us</h1>
-         </div>
-      </div>
-   </div>
-</div>
-<!-- /Page Header -->
-
-
-
-<div class="section">
-   <!-- container -->
-   <div class="container">
-      <!-- row -->
-      <div class="row">
-         <div class="col-md-8">
-            <div class="section-row">
-               <p>Lorem ipsum dolor sit amet, ea eos tibique expetendis, tollit viderer ne nam. No ponderum accommodare
-                  eam, purto nominavi cum ea, sit no dolores tractatos. Scripta principes quaerendum ex has, ea mei omnes
-                  eruditi. Nec ex nulla mandamus, quot omnesque mel et. Amet habemus ancillae id eum, justo dignissim mei
-                  ea, vix ei tantas aliquid. Cu laudem impetus conclusionemque nec, velit erant persius te mel. Ut eum
-                  verterem perpetua scribentur.</p>
-               <figure class="figure-img">
-                  <img class="img-responsive" src="./img/about-1.jpg" alt="">
-               </figure>
-               <p>Vix mollis admodum ei, vis legimus voluptatum ut, vis reprimique efficiendi sadipscing ut. Eam ex animal
-                  assueverit consectetuer, et nominati maluisset repudiare nec. Rebum aperiam vis ne, ex summo aliquando
-                  dissentiunt vim. Quo ut cibo docendi. Suscipit indoctum ne quo, ne solet offendit hendrerit nec. Case
-                  malorum evertitur ei vel.</p>
-            </div>
-            <div class="row section-row">
-               <div class="col-md-6">
-                  <figure class="figure-img">
-                     <img class="img-responsive" src="./img/about-2.jpg" alt="">
-                  </figure>
-               </div>
-               <div class="col-md-6">
-                  <h3>Our Mission</h3>
-                  <p>Id usu mutat debet tempor, fugit omnesque posidonium nec ei. An assum labitur ocurreret qui, eam
-                     aliquid ornatus tibique ut.</p>
-                  <ul class="list-style">
-                     <li>
-                        <p>Vix mollis admodum ei, vis legimus voluptatum ut.</p>
-                     </li>
-                     <li>
-                        <p>Cu cum alia vide malis. Vel aliquid facilis adolescens.</p>
-                     </li>
-                     <li>
-                        <p>Laudem rationibus vim id. Te per illum ornatus.</p>
-                     </li>
-                  </ul>
-               </div>
-            </div>
+         <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch" data-aos="fade-right">
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
          </div>
 
+         <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" data-aos="fade-left">
+            <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
+            <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi. Libero laboriosam sint et id nulla tenetur. Suscipit aut voluptate.</p>
 
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+               <div class="icon"><i class="bx bx-fingerprint"></i></div>
+               <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            </div>
+
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+               <div class="icon"><i class="bx bx-gift"></i></div>
+               <h4 class="title"><a href="">Nemo Enim</a></h4>
+               <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+            </div>
+
+            <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+               <div class="icon"><i class="bx bx-atom"></i></div>
+               <h4 class="title"><a href="">Dine Pad</a></h4>
+               <p class="description">Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut deserunt minus aut eligendi omnis</p>
+            </div>
+
+         </div>
       </div>
-      <!-- /row -->
-   </div>
-   <!-- /container -->
-</div>
-<!-- /section -->
 
-@push('kategori')
-<ul class="footer-links">
-   @foreach($kategori as $row)
-   <li><a href="{{ route('artikel.kategori', $row->slug) }}">{{ $row->nama_kategori }}</a></li>
-   @endforeach
-</ul>
-@endpush
-@endsection
+   </div>
+</section>

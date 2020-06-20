@@ -87,7 +87,7 @@
                 <!-- sidebar menu: : style can be found in sidebar.less -->
                 <ul class="sidebar-menu">
                     <li class="treeview">
-                    <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+                    <li><a href="{{ route('home') }}"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                     <li><a href="{{ route('kategori.index') }}"><i class="fa fa-adjust"></i> Kategori</a></li>
                     <li><a href="{{ route('artikel.index') }}"><i class="fa fa-pencil"></i>Artikel</a></li>
                     </li>
